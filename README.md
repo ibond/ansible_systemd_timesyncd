@@ -14,6 +14,8 @@ systemd
 | `timesync_ntp_hosts`               |                       | Array of NTP hosts                                                                |
 | `timesync_fallback_ntp_hosts`      | `{0..3}.pool.ntp.org` | Array of fallback NTP hosts                                                       |
 | `timesync_write_hwclock_on_change` |        `True`         | Whether to write the time to the hardware clock after changing the configuration. |
+| `timesync_rtc_set`                 |        `auto`         | Determines if the RTC will be updated. `auto` will only update if the RTC exists  |
+| `timesync_rtc_dev`                 |      `/dev/rtc`       | The RTC device to be used                                                         |
 
 ## Dependencies
 
