@@ -44,7 +44,7 @@
 - name: "Evaluate RTC auto update"
   set_fact:
     timesync_rtc_set: true
-  when: timesync_rtc_set == "auto" and rtc_dev.stat.exists and rtc.dev.stat.writeable and (ansible_virtualization_role == "host" or ansible_virtualization_role == "NA")
+  when: timesync_rtc_set == "auto" and rtc_dev.stat.exists and rtc_dev.stat.writeable and (ansible_virtualization_role == "host" or ansible_virtualization_role == "NA")
 
 - name: Wait for time to synchronize
   shell: "timedatectl | grep 'NTP synchronized' | cut -d' ' -f3"
